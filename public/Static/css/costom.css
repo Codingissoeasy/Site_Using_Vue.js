@@ -1,0 +1,38 @@
+body{
+    padding: 0;
+    margin: 0;
+}
+
+/*##########################################################################################*/
+/*                                              Home Page                                  */
+/*##########################################################################################*/
+.bgimg-1, .bgimg-2, .bgimg-3 {
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  
+  /* First image (Logo. Full height) */
+.bgimg-1 {
+    background-image: url('/static/img/template_img/home_sec1-1.jpg');
+    min-height: 100%;
+    font-family: "Lato", sans-serif;
+    
+}
+
+/*##########################################################################################*/
+/*                                              Default Page                                  */
+/*##########################################################################################*/
+
+.defult_html {
+    height: 100%
+}
+
+.bgimg_defult_page {
+    /* background-image: url('/static/img/template_img/Commingsoon.jpg'); */
+    background-image: url('/static/img/template_img/default-forestbridge.jpg');
+    min-height: 100%;
+    background-position: center;
+    background-size: cover;
+}

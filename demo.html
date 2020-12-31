@@ -1,0 +1,260 @@
+<html>
+
+<head>
+    <!-----------------Meta Reqment---------------------->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!--CSS For W3-->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/w3.css') }}">
+
+    <!--Font For CSS-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+
+
+    <!--costom css and icon-->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/costom.css') }}">
+    <link rel="icon" href=" {{ url_for('static', filename='img/icon/icon.png') }}">
+
+    <title>
+        {{ params.blog_name }}
+    </title>
+
+
+</head>
+
+<!--
+###############################################################################################################
+                                        Navigation Part
+###############################################################################################################
+    -->
+
+<section>
+    <div class="w3-top">
+        <div class="w3-bar w3-white w3-wide w3-padding w3-card" id="myNavbar">
+            <a href="/" class="w3-bar-item w3-button " style="letter-spacing: 3px; padding-left: 10px;">
+                <i class="fa fa-user-lock"></i>
+                <img src="/static/img/icon/icon.png" style="width: 35px;height: auto;padding-right: 2px;">
+                {{ params.blog_name }}
+            </a>
+            <!-- Float links to the right. Hide them on small screens -->
+            <div class="w3-right w3-right" style="letter-spacing: normal;">
+                <a class="w3-bar-item w3-button w3-hover-black w3-hide-medium w3-hide-large w3-right"
+                    href="javascript:void(0);" onclick="toggleFunction()" title="Toggle Navigation Menu">
+                    <i class="fa fa-bars"></i>
+                </a>
+                <a href="/" class="w3-bar-item w3-button w3-hide-small">Home</a>
+                <a href="/language" class="w3-bar-item w3-button w3-hide-small">Language's</a>
+                <a href="/comp-prog" class="w3-bar-item w3-button w3-hide-small">Compititive-Programming</a>
+                <a href="/contect" class="w3-bar-item w3-button w3-hide-small">Contect US</a>
+
+            </div>
+            <!--For small screen-->
+            <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium"
+                style="letter-spacing: normal; font-size: small;">
+                <a href="/" class="w3-bar-item w3-button" onclick="toggleFunction()">Home</a>
+                <a href="/language" class="w3-bar-item w3-button" onclick="toggleFunction()">Language</a>
+                <a href="/comp-prog" class="w3-bar-item w3-button"
+                    onclick="toggleFunction()">Compititive-Programming</a>
+                <a href="/contact" class="w3-bar-item w3-button" onclick="toggleFunction()">Contect US</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+{% block Body %}
+
+
+
+{% endblock %}
+
+
+
+<!--
+###############################################################################################################
+                                        Footer Part
+###############################################################################################################
+    -->
+
+<footer class="w3-padding-16 w3-border-top w3-card w3-white"
+    style="margin-top: 2px; margin-left: 0; margin-right: 0; margin-bottom: 0; ">
+    <div class="w3-cell-row">
+        <!---------------------------------------First Division--------------------------------------->
+        <div class="w3-container  w3-cell">
+            <center style="margin-top: 45px;margin-bottom: 16px;">
+                <img class="mb-2" src="{{ url_for('static' , filename='/img/icon/icon.png') }}" alt="" width="39"
+                    height="39">
+                <h6>
+                    {{ params.blog_name }}
+                </h6>
+
+                <small class="d-block mb-3 text-muted"> © 2020 </small>
+
+            </center>
+            <center>
+                <a href=" {{ params.fb_url }}" class="w3-button w3-circle w3-white w3-hover-blue"
+                    style="padding-left: 12px; padding-right: 12px;">
+                    <i class="fa fa-facebook"></i>
+                </a>
+                <a href="{{ params.gml_url}}" class="w3-button w3-circle w3-white w3-hover-red"
+                    style="padding-left: 9px; padding-right: 9px;">
+                    <i class="fa fa-envelope"></i>
+                </a>
+                <a href="{{ params.wa_url }}" class="w3-button w3-circle w3-white w3-hover-green"
+                    style="padding-left: 9px; padding-right: 9px;">
+                    <i class="fa fa-whatsapp"></i>
+                </a>
+                <a href="{{ params.inst_url}}" class="w3-button w3-circle w3-white w3-hover-red"
+                    style="padding-left: 9px; padding-right: 9px;">
+                    <i class="fa fa-instagram"></i>
+                </a>
+                <a href="{{ params.tw_url }}" class="w3-button w3-circle w3-white w3-hover-blue"
+                    style="padding-left: 9px; padding-right: 9px;">
+                    <i class="fa fa-twitter"></i>
+                </a>
+            </center>
+        </div>
+
+
+        <!-----------------------------------Sec. Division----------------------------------->
+
+
+        <div class="w3-container  w3-cell w3-hide-small w3-hide-medium">
+            <h5 style="margin-left: 10px;"> <b>Web Devlopment</b></h5>
+            <!-- <ul class="list-unstyled text-small" style="font-family: sans-serif; "> -->
+            <ul class="w3-ul w3-border-0 text-small" style="font-family: sans-serif; ">
+                <li class="w3-border-0">
+                    <a class="w3-button " href="/c-language" style="padding : 2px;">
+                        C Programming
+                    </a>
+                </li>
+                <li class="w3-border-0" style="margin-top : -10px;">
+                    <a class="w3-button " href="/language" style="padding : 2px;">
+                        C++ Language
+                    </a>
+                </li>
+                <li class="w3-border-0" style="margin-top : -10px;"><a class="w3-button " href="/python"
+                        style="padding : 2px;">Python</a></li>
+                <li class="w3-border-0" style="margin-top : -10px;"><a class="w3-button " href="/machine-learning"
+                        style="padding : 2px;">Machine Learning</a>
+                </li>
+                <li class="w3-border-0" style="margin-top : -10px;"><a class="w3-button " href="/java"
+                        style="padding : 2px;">JAVA</a></li>
+                <!-- <li class="w3-border-0" style="margin-top : -10px;"><a class="w3-button " href="#"></a></li> -->
+            </ul>
+        </div>
+
+
+        <!---------------------------------Third Division--------------------------------->
+
+
+        <div class="w3-container  w3-cell w3-hide-small w3-hide-medium">
+            <h5><b>Web Design</b></h5>
+            <ul class="w3-ul w3-border-0 text-small" style="font-family: sans-serif; ">
+                <li class="w3-border-0" style="margin-top : -10px;"><a class="w3-button " style="padding : 2px;"
+                        href="/html">HTML</a></li>
+                <li class="w3-border-0" style="margin-top : -10px;"><a class="w3-button " style="padding : 2px;"
+                        href="/css">CSS</a></li>
+                <li class="w3-border-0" style="margin-top : -10px;"><a class="w3-button " style="padding : 2px;"
+                        href="/js">JavaScript</a></li>
+                <li class="w3-border-0" style="margin-top : -10px;"><a class="w3-button " style="padding : 2px;"
+                        href="/bt4">Bootstrap</a></li>
+                <li class="w3-border-0" style="margin-top : -10px;"><a class="w3-button " style="padding : 2px;"
+                        href="#"></a></li>
+                <li class="w3-border-0" style="margin-top : -10px;"><a class="w3-button " style="padding : 2px;"
+                        href="#"></a></li>
+                <li class="w3-border-0" style="margin-top : -10px;"><a class="w3-button " style="padding : 2px;"
+                        href="#"></a></li>
+            </ul>
+        </div>
+
+
+        <!---------------------------------Fourth Division--------------------------------->
+
+
+
+        <div class="w3-container w3-cell">
+            <h5 class="w3-margin-left"><b> Menu</b></h5>
+            <ul class="w3-ul w3-border-0 text-small" style="font-family: sans-serif; ">
+                <li class="w3-border-0" style="margin-top : -10px;"><a class="w3-button " style="padding : 2px;"
+                        href="/">Home</a></li>
+                <li class="w3-border-0" style="margin-top : -10px;"><a class="w3-button " style="padding : 2px;"
+                        href="/language">Language</a></li>
+                <li class="w3-border-0" style="margin-top : -10px;"><a class="w3-button " style="padding : 2px;"
+                        href="/comp-prog">Compititive
+                        Programming</a></li>
+                <li class="w3-border-0" style="margin-top : -10px;"><a class="w3-button " style="padding : 2px;"
+                        href="/contect">Contact Us</a></li>
+            </ul>
+        </div>
+    </div>
+</footer>
+
+
+
+
+<!--Script-->
+<script>
+    function toggleFunction() {
+        var x = document.getElementById("navDemo");
+        if (x.className.indexOf("w3-show") == -1) {
+            x.className += " w3-show";
+        }
+        else {
+            x.className = x.className.replace(" w3-show", "");
+        }
+    }
+    function w3_open() {
+        document.getElementById("mySidebar").style.display = "block";
+    }
+    function w3_close() {
+        document.getElementById("mySidebar").style.display = "none";
+    }
+
+    //Tabs Script
+
+    function tabs_varname(var_nametabs) {
+        var i;
+        var x = document.getElementsByClassName("city");
+        for (i = 0; i < x.length; i++) {
+            x[i].style.display = "none";
+        }
+        document.getElementById(var_nametabs).style.display = "block";
+    }
+    function Code_copy() {
+        var copyText = document.querySelector("#input");
+        copyText.select();
+        document.execCommand("copy");
+    }
+
+    function myFunction() {
+  var x = document.getElementById("Demo");
+  if (x.className.indexOf("w3-show") == -1) {
+    x.className += " w3-show";
+  } else { 
+    x.className = x.className.replace(" w3-show", "");
+  }
+}
+
+    // function myFunction(id) {
+    //     var x = document.getElementById(id);
+    //     if (x.className.indexOf("w3-show") == -1) {
+    //         x.className += " w3-show";
+    //     } else {
+    //         x.className = x.className.replace(" w3-show", "");
+    //     }
+    // }
+
+
+    // browser.alarms.create({
+    //     delayInMinutes: 0.1
+    // });
+    // browser.alarms.onAlarm.addListener(copy);
+
+</script>
+
+
+
+</html>
